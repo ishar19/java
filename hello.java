@@ -44,6 +44,10 @@ public class hello{
 
 }
 
+class Student{
+    String name;
+    int rno;
+}
 
 //Literals and Identifiers == In primitive data types, literals are the syntactic representation of the data types  int a = 10; a is identifier and 10 is literal 
 //Primitive Data Types   Any data type that you cannot break further
