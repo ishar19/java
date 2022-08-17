@@ -20,10 +20,28 @@ public class Main {
 
         //Pretty Printing 
         float f = 3.145f;
-       
+        System.out.printf("Format string %.2f", f); 
 
         //String Concat
-        System.out.println("a"+"b");
+        System.out.println('a'+'b'); //195
+        System.out.println("a"+"b"); //concat ab
+        System.out.println('a'+3); //100
+        System.out.println((char)('a' + 3));//d
+        System.out.println("a"+1); //a1
+
+        //If one of the data type is string, answer is String 
+
+
+        //integer will be converted into wrapper class Integer which calls toString
+        //Same with this 
+        System.out.println("Xero" + new Integer(1));//Xero1
+
+        //NOTE one of the objects should be string or use with primitives
+        //This wont work (new Integer + new ArrayList<>())
+        //btw this will work (new Integer + " "+ new ArrayList<>())
+
+        //Format specifiers
+        System.out.printf("My name is %s ", "Ishar");
 
     }
 }
