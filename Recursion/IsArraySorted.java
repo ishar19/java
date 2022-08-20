@@ -1,4 +1,3 @@
-package javaCode.Recursion;
 
 public class IsArraySorted {
     public static void main(String[] args) {
