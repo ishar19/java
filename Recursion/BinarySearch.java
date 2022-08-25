@@ -16,7 +16,7 @@ public class BinarySearch {
         if (nums[mid] > target) {
             return searchArray(nums,  start,  mid-1,  target);
         }
-            return searchArray(nums, mid+1, end, target);
+        return searchArray(nums, mid+1, end, target);
 
 
     }
