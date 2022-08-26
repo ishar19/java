@@ -1,22 +1,21 @@
 public class linkedList {
 
-    
     private Node head;
     private Node tail;
     private int size;
-    
+
     public linkedList() {
         this.size = 0;
     }
-    
+
     public void insertFirst(int value) {
         Node node = new Node(value);
         node.next = head;
         head = node;
-        if(tail==null){
+        if (tail == null) {
             tail = head;
         }
-        size +=1;
+        size += 1;
     }
 
     public void insertEnd(int value) {
@@ -31,22 +30,22 @@ public class linkedList {
 
     }
 
-    public void insert(int value, int index){
-        if(index==0){
+    public void insert(int value, int index) {
+        if (index == 0) {
             insertFirst(value);
             return;
         }
-        if(index==size){
+        if (index == size) {
             insertEnd(value);
             return;
         }
         Node temp = head;
-        for(int i = 1;i<index;i++){
+        for (int i = 1; i < index; i++) {
             temp = temp.next;
         }
         Node node = new Node(value, temp.next);
         temp.next = node;
-        size+=1;
+        size += 1;
     }
 
     public int deleteLast() {
@@ -107,20 +106,35 @@ public class linkedList {
         return val;
     }
 
-    public void display(){
+    public void display() {
         Node temp = head;
-        while(temp!=null){
+        while (temp != null) {
             System.out.println(temp.value + " ");
             temp = temp.next;
         }
     }
-    
+
+    public void insertRec(int val, int index) {
+        head = insertRec(val, index, head);
+    }
+
+    private Node insertRec(int val, int index, Node node) {
+        if (index == 0) {
+            Node temp = new Node(val, node);
+            size++;
+            return temp;
+        }
+
+        node.next = insertRec(val, index - 1, node.next);
+        return node;
+    }
+
     private class Node {
 
         private int value;
         private Node next;
-        
-        public Node(int value){
+
+        public Node(int value) {
             this.value = value;
         }
 
