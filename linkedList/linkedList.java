@@ -129,6 +129,17 @@ public class linkedList {
         return node;
     }
 
+    private void recursionReverse(Node node) {
+        if (node == tail) {
+            head = tail;
+            return ;
+        }
+        recursionReverse(node.next);
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+    }
+
     private class Node {
 
         private int value;
