@@ -3,6 +3,7 @@ package Problems;
 public class main {
     // https://leetcode.com/problems/linked-list-cycle
     // Amazon and Microsoft
+    //important
     public boolean hasCycle(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;
